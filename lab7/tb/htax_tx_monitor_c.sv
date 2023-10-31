@@ -38,18 +38,25 @@ class htax_tx_monitor_c extends uvm_monitor;
 			
 			@(posedge |htax_tx_intf.tx_vc_gnt) begin
 				//TO DO : Assign tx_mon_packet.dest_port from htax_tx_intf.tx_outport_req
-
-
-
+				//Encoding the tx_outport_req and then assigning it to tx_mon_packet.dest_port
+				tx_mon_packet.dest_port <= htax_tx_intf.tx_outport_req;
+				case(htax_tx_intf.tx_outport_req) 
+					'b0001: tx_mon_packet.dest_port <= 'b00;	
+					'b0010: tx_mon_packet.dest_port <= 'b01;	
+					'b0100: tx_mon_packet.dest_port <= 'b10;	
+					'b1000: tx_mon_packet.dest_port <= 'b11;
+					default: tx_mon_packet.dest_port = 'b00;
+				endcase
 			end		
 					
 			@(posedge htax_tx_intf.clk);
 			//TO DO : On consequtive cycles append htax_tx_intf.tx_data to tx_mon_packet.data[] till htax_tx_intf.tx_eot pulse
-			while(XXX) begin // TO DO : Replace XXX with appropriate condition
+			// sending the values to tx_mon_packet till the time tx_eot is 0
+			while(~ htax_tx_intf.tx_eot) begin // TO DO : Replace XXX with appropriate condition
 
-
-
-
+			@(posedge htax_tx_intf.clk);
+			tx_mon_packet.data = new[++pkt_len](tx_mon_packet.data); // Dynamically increasing the size of array
+			tx_mon_packet.data[pkt_len-1] =  htax_tx_intf.tx_data;
 			end
 			tx_mon_packet.print();
 		end
