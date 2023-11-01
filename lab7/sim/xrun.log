@@ -1,5 +1,5 @@
 xrun: 22.03-s004: (c) Copyright 1995-2022 Cadence Design Systems, Inc.
-TOOL:	xrun	22.03-s004: Started on Oct 31, 2023 at 17:42:21 CDT
+TOOL:	xrun	22.03-s004: Started on Oct 31, 2023 at 21:57:49 CDT
 irun
 	-f run.f
 		+access+rwc
@@ -173,9 +173,9 @@ xrun: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,12): cds.lib Invalid environm
 DEFINE      NCSU_TechLib_tsmc04_4M2P    $CDK_DIR/lib/NCSU_TechLib_tsmc04_4M2P
 |
 xrun: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,13): cds.lib Invalid environment variable ''.
-Recompiling... reason: file '../tb/htax_tx_monitor_c.sv' is newer than expected.
-	expected: Tue Oct 31 17:41:22 2023
-	actual:   Tue Oct 31 17:42:19 2023
+Recompiling... reason: file '../tb/htax_tx_driver_c.sv' is newer than expected.
+	expected: Tue Oct 31 21:55:23 2023
+	actual:   Tue Oct 31 21:57:35 2023
 SOFTINCLUDE $SYSTEM_CDS_LIB_DIR/cds.lib
 |
 xrun: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,1): cds.lib Invalid environment variable ''.
@@ -285,12 +285,6 @@ xmvlog: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,12): cds.lib Invalid enviro
 DEFINE      NCSU_TechLib_tsmc04_4M2P    $CDK_DIR/lib/NCSU_TechLib_tsmc04_4M2P
 |
 xmvlog: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,13): cds.lib Invalid environment variable ''.
-file: ../tb/htax_pkg.sv
-	package worklib.htax_pkg:sv
-		errors: 0, warnings: 0
-file: ../tb/htax_top.sv
-	module worklib.top:sv
-		errors: 0, warnings: 0
 file: ../tb/htax_rx_interface.sv
 xmvlog: *W,SPDUSD: Include directory ../design given but not used.
 	Total errors/warnings found outside modules and primitives:
@@ -424,45 +418,6 @@ xmelab: *W,COVUCC (../tb/htax_env.sv,7|13): Block and Expression coverage types 
 .......... Done
 	Enabling instrumentation for coverage types: block expression FSM toggle functional
 xmelab: *W,COVDCL: By default expression coverage is scored only for Verilog logical operators (|| and &&) and VHDL logical operators (OR, AND, NOR, and NAND), and is scored only in condition expressions. To score coverage for other operators and for expressions in other statements, use the "set_expr_coverable_operators" and "set_expr_coverable_statements" coverage configuration file commands with suitable options at elaboration.
-	Generating native compiled code:
-SOFTINCLUDE $SYSTEM_CDS_LIB_DIR/cds.lib
-|
-xmvlog_cg: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,1): cds.lib Invalid environment variable ''.
-DEFINE      basic                   $CDK_DIR/lib/basic
-|
-xmvlog_cg: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,2): cds.lib Invalid environment variable ''.
-DEFINE      NCSU_Analog_Parts 	    $CDK_DIR/lib/NCSU_Analog_Parts
-|
-xmvlog_cg: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,3): cds.lib Invalid environment variable ''.
-DEFINE      NCSU_Digital_Parts 	    $CDK_DIR/lib/NCSU_Digital_Parts
-|
-xmvlog_cg: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,4): cds.lib Invalid environment variable ''.
-DEFINE      NCSU_TechLib_ami06      $CDK_DIR/lib/NCSU_TechLib_ami06
-|
-xmvlog_cg: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,6): cds.lib Invalid environment variable ''.
-DEFINE      NCSU_TechLib_ami16      $CDK_DIR/lib/NCSU_TechLib_ami16
-|
-xmvlog_cg: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,7): cds.lib Invalid environment variable ''.
-DEFINE      NCSU_TechLib_hp06       $CDK_DIR/lib/NCSU_TechLib_hp06
-|
-xmvlog_cg: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,8): cds.lib Invalid environment variable ''.
-DEFINE      NCSU_TechLib_tsmc02     $CDK_DIR/lib/NCSU_TechLib_tsmc02
-|
-xmvlog_cg: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,9): cds.lib Invalid environment variable ''.
-DEFINE      NCSU_TechLib_tsmc02d    $CDK_DIR/lib/NCSU_TechLib_tsmc02d
-|
-xmvlog_cg: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,10): cds.lib Invalid environment variable ''.
-DEFINE      NCSU_TechLib_tsmc03     $CDK_DIR/lib/NCSU_TechLib_tsmc03
-|
-xmvlog_cg: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,11): cds.lib Invalid environment variable ''.
-DEFINE      NCSU_TechLib_tsmc03d    $CDK_DIR/lib/NCSU_TechLib_tsmc03d
-|
-xmvlog_cg: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,12): cds.lib Invalid environment variable ''.
-DEFINE      NCSU_TechLib_tsmc04_4M2P    $CDK_DIR/lib/NCSU_TechLib_tsmc04_4M2P
-|
-xmvlog_cg: *W,DLCVAR (/home/grads/s/sushan_1201/cds.lib,13): cds.lib Invalid environment variable ''.
-		worklib.top:sv <0x0d94a58d>
-			streams: 782, words: 733048
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -650,9 +605,9 @@ req                            htax_packet_c  -     @6393
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 250000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 270000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 930000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 250000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 270000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 930000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -699,9 +654,9 @@ req                            htax_packet_c  -     @6326
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 1270000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 1290000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 2270000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 1270000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 1290000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 2270000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -748,9 +703,9 @@ req                            htax_packet_c  -     @6334
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 2390000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 2410000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 3210000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 2390000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 2410000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 3210000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -797,9 +752,9 @@ req                            htax_packet_c  -     @6454
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 3550000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 3570000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 4390000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 3550000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 3570000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 4390000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -845,9 +800,9 @@ req                            htax_packet_c  -     @6385
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 4530000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 4550000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 4750000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 4530000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 4550000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 4750000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -893,9 +848,9 @@ req                            htax_packet_c  -     @6277
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 5070000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 5090000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 6290000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 5070000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 5090000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 6290000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -942,9 +897,9 @@ req                            htax_packet_c  -     @6366
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 6510000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 6530000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 6990000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 6510000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 6530000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 6990000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -984,9 +939,9 @@ req                            htax_packet_c  -     @6446
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 7090000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 7110000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 7190000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 7090000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 7110000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 7190000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -1026,9 +981,9 @@ req                            htax_packet_c  -     @6450
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 7570000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 7590000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 8050000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 7570000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 7590000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 8050000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -1071,9 +1026,9 @@ req                            htax_packet_c  -     @6295
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 8410000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 8430000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 8570000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 8410000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 8430000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 8570000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -1116,9 +1071,9 @@ req                            htax_packet_c  -     @6328
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 8910000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 8930000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 9370000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 8910000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 8930000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 9370000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -1165,9 +1120,9 @@ req                            htax_packet_c  -     @6351
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 9670000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 9690000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 10230000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 9670000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 9690000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 10230000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -1214,9 +1169,9 @@ req                            htax_packet_c  -     @6451
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 10530000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 10550000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 11550000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 10530000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 10550000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 11550000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -1263,9 +1218,9 @@ req                            htax_packet_c  -     @6266
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 11910000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 11930000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 12530000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 11910000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 11930000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 12530000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -1305,9 +1260,9 @@ req                            htax_packet_c  -     @6277
   sequencer                    string         36    uvm_test_top.tb.tx_port[1].sequencer                  
 ----------------------------------------------------------------------------------------------------------
 
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 12930000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(81) @ 12950000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
-UVM_INFO ../tb/htax_tx_driver_c.sv(129) @ 13030000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 12930000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(83) @ 12950000: uvm_test_top.tb.tx_port[1].tx_driver [TOP] Waiting for tx_vc_gnt
+UVM_INFO ../tb/htax_tx_driver_c.sv(137) @ 13030000: uvm_test_top.tb.tx_port[1].tx_driver [htax_tx_driver_c] Ended Driving Data Packet to DUT
 --------------------------------------------------------------------
 Name                  Type                  Size  Value             
 --------------------------------------------------------------------
@@ -1360,4 +1315,4 @@ coverage setup:
 coverage files:
   model(design data) :  ./cov_work/scope/icc_1cfdfc8b_4389b1cd.ucm (reused)
   data               :  ./cov_work/scope/test/icc_1cfdfc8b_4389b1cd.ucd
-TOOL:	xrun	22.03-s004: Exiting on Oct 31, 2023 at 17:42:28 CDT  (total: 00:00:07)
+TOOL:	xrun	22.03-s004: Exiting on Oct 31, 2023 at 21:57:54 CDT  (total: 00:00:05)

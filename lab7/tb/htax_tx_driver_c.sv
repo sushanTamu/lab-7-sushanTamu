@@ -68,7 +68,7 @@ task htax_tx_driver_c::drive_thru_dut(htax_packet_c pkt);
 		'b01: htax_tx_intf.tx_outport_req <= 4'b0010;	
 		'b10: htax_tx_intf.tx_outport_req <= 4'b0100;	
 		'b11: htax_tx_intf.tx_outport_req <= 4'b1000;
-		default: htax_tx_intf.tx_outport_req = 4'b0001;
+		default: htax_tx_intf.tx_outport_req <= 4'b0001;
 	endcase
 
 	//TO DO : Assign htax_tx_intf.tx_vc_req from pkt.vc
@@ -100,7 +100,7 @@ task htax_tx_driver_c::drive_thru_dut(htax_packet_c pkt);
 		
 	//TO DO : Reset htax_tx_intf.tx_outport_req and htax_tx_intf.tx_vc_req (to zero)
 	htax_tx_intf.tx_outport_req  <= 'b0;
-	htax_tx_intf.tx_vc_req       = 'b0;
+	htax_tx_intf.tx_vc_req       <= 'b0;
 
 	//TO DO : On consecutive clk-posedges drive each of the packet's pkt.data on htax_tx_intf.tx_data
 	//TO DO : Assign htax_tx_intf.tx_sot to zero after first cycle

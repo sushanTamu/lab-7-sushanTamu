@@ -50,3 +50,6 @@ s49(31Oct2023:16:37:31):  irun -f run.f +UVM_TESTNAME=simple_random_test
 s50(31Oct2023:17:34:36):  irun -f run.f +UVM_TESTNAME=simple_random_test 
 s51(31Oct2023:17:41:25):  irun -f run.f +UVM_TESTNAME=simple_random_test 
 s52(31Oct2023:17:42:22):  irun -f run.f +UVM_TESTNAME=simple_random_test 
+s53(31Oct2023:21:48:00):  irun -f run.f +UVM_TESTNAME=simple_random_test 
+s54(31Oct2023:21:55:27):  irun -f run.f +UVM_TESTNAME=simple_random_test 
+s55(31Oct2023:21:57:49):  irun -f run.f +UVM_TESTNAME=simple_random_test 
